@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="0; src="">
+
+    <title>Document</title>
+</head>
+<body>
+    <a href="" id="reslink">link1</a>
+
+    <div class="span8" id="maincont"></div>
+
+    <script>
+        $('#reslink').click(function(){
+    $.ajax({
+        type: "GET",
+        url: "public/index.html",
+        data: { },
+        success: function(data){
+            $('#maincont').html(data);
+        }
+    });
+
+});
+    </script>
+</body>
+</html>
